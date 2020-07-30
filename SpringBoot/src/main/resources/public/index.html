@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Nancy-index</title>
+    <link rel="stylesheet" href="@{css/bootstrap.min.css}"/>
+    <style type="text/css">
+        body { padding: 40px;
+        background-color: #5bc0de;}
+    </style>
+</head>
+<body>
+<h1>Hello!</h1>
+<br/>Welcome.<a authentication="name"></a>
+<br/><hr/>
+<form action="@{/logout}" method="post">
+    <input type="submit" class="btn btn-primary" value="log out"/>
+</form>
+</body>
+</html>
