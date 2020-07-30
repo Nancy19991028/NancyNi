@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  application:
+    name: demo
+
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/postgres
+    username: postgres
+    password: pg123456
+
+  flyway:
+    enabled: true
+    # Disables cleaning of database tables
+    clean-disabled: false
+    # If the database is not an empty table, you need to set it to true, otherwise an error will be reported
+    baseline-on-migrate: true
+    # Use with baseline-on-migrate: true
+    baseline-version: 0
+    locations: classpath:db.migration
+
+logging:
+  level:
+    com:
+      dc:
+        pcasweb:
+          mapper: debug
+
